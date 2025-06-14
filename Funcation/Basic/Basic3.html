@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Square Calculator</title>
+</head>
+<body>
+
+    <h1>Enter a number</h1>
+    <input type="text" id="numberInput" placeholder="Enter a number">
+    <button onclick="calculateSquare()">Calculate Square</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function calculateSquare() {
+            // Get the value from the input
+            var num = document.getElementById("numberInput").value;
+            // Convert to number
+            var number = parseFloat(num);
+
+
+            // Calculate the square
+            var square = number * number;
+
+            // Display the result
+            document.getElementById("result").innerText = "The square is: " + square;
+        }
+    </script>
+
+</body>
+</html>
+    
+</body>
+
+
+ 
+
+
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+    /*
+    1. تطبيق آلة حاسبة بسيطة
+
+المفاهيم المستخدمة: prompt، Number()، if / else، العمليات الرياضية
+
+ الفكرة:
+
+    المستخدم يدخل رقمين من خلال prompt
+
+    ثم يختار عملية: جمع أو طرح أو ضرب أو قسمة
+
+    تُعرض النتيجة باستخدام 
+
+
+
+    */
+
+
+    let num1 =  Number(prompt("Enter the first number:"));
+    let num2 =  Number(prompt("Enter the secoend number:"));
+
+    let operation = prompt("Enter the operation (+, -, *, /):");
+
+    if(operation == "+"){
+        alert ("the result is "  + (num1+num2));
+    }else if(operation == "-"){
+        alert ("the result is "  + (num1-num2));
+    }else if(operation == "*"){
+        alert ("the result is "  + (num1*num2));
+    }else if(operation == "/"){
+        alert ("the result is "  + (num1/num2));
+    }else{
+        alert ("the result is "  + "invalid operation");
+    }
+
+
+    </script>
+    
+</body>
+</html>
