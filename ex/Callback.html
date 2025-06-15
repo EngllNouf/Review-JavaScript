@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        function calculate(num1, num2, callback) {
+            let result = num1 + num2;
+            callback(result);
+            
+
+
+
+        
+    }
+
+    // 🔸 المطلوب: اطبع ناتج جمع 5 + 3
+    calculate(5, 3, function(result) {
+        console.log("الناتج هو: " + result);
+    });
+
+    setTimeout(function() {
+        console.log("تم تنفيذ العملية بعد 2 ثانية");
+    }, 2000);
+
+
+
+
+// 🔸 المطلوب: اطبع ناتج طرح 5 -    3
+    </script>
+    
+</body>
+</html>

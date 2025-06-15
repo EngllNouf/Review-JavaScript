@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        //Anonymous Function
+        // 1. تعريف دالة بدون اسم
+        
+        
+        function Greeting(){
+          console.log("Hello, welcome to the world of JavaScript!") 
+        }
+        let greeting1=  Greeting;
+        greeting1(); // Hello, welcome to the world of JavaScript!
+
+     let Name = function(){
+        console.log("Nouf !")
+     }
+     Name(); // Nouf !
+
+
+
+     // 2. تعريف دالة بدون اسم وتمرير الباراميتر
+     let sum = function(num1,num2){
+        return num1 + num2;
+     }
+     
+
+     console.log(sum.length)
+
+     //call anther function
+     function callfunction(FunctionThatCall){
+        console.log("here is the function that call another function")
+        FunctionThatCall();
+     }
+
+     callfunction(Name)
+
+     // دور الفانكشن عدية الاسم 
+     
+
+
+    </script>
+    
+</body>
+</html>
