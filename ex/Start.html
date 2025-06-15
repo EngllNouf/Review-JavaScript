@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تغيير لون تلقائي</title>
+    <style>
+        button {
+            width: 100px;
+            height: 50px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-style: italic;
+            margin: 200px;
+        }
+        button:hover {
+            background-color: rgb(6, 36, 36);
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn">Start</button>
+
+    <script>
+        function generateNewColor() {
+            // توليد لون عشوائي وتغيير الخلفية
+            document.body.style.backgroundColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        }
+
+        // عند أول ضغطة زر: يبدأ التغيير التلقائي
+        document.getElementById("btn").addEventListener("click", function() {
+            // تمنع التكرار لو ضغطت مرتين
+            this.disabled = true;
+            this.innerText = "Running...";
+
+            // تغيير اللون كل ثانية (1000 ملي ثانية)
+            setInterval(generateNewColor, 1000);
+        });
+    </script>
+
+</body>
+</html>
