@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+    let name = "Noof"; // Global Scope
+
+        function sayHello() {
+        console.log("Hello " + name); // يمكن استخدام name هنا
+        }
+
+        sayHello(); // Hello Noof
+
+
+            function greet() {
+        let message = "Hi there"; // Function Scope
+        console.log(message);
+        }
+
+        greet();
+        // console.log(message); // ❌ Error: message is not defined
+
+    
+
+         if (true) {
+        let color = "yellow";
+        const age = 25;
+        console.log(color); // yellow
+        }
+
+        // console.log(color); // ❌ Error: color is not defined
+
+        if (true) {
+        var test = "inside";
+        }
+        console.log(test); // ✅ يعمل لأن var تتجاهل البلوك
+
+
+
+    </script>
+    
+</body>
+</html>
