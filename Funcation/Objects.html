@@ -46,6 +46,11 @@
              
         ];        
 
+        // edit value
+    //   students.age = 25; this will change all value
+        students[1].age = 25; // this will change only first value
+         console.log(students[1].age); // Output: 25
+
         
        
        
@@ -55,9 +60,9 @@
           //     });
 
             //or we can use arrow function
-            // students.forEach((student) => {
-            //     console.log("Name: " + student.name + ", Age: " + student.age + ", Major: " + student.major);
-            // });
+            students.forEach((student) => {
+                console.log("Name: " + student.name + ", Age: " + student.age + ", Major: " + student.major);
+             });
 
             //or we can use for loop
             // for (let i = 0; i < students.length; i++) {
@@ -67,8 +72,8 @@
 
 
 
-            firsrStudent = students[0]; // Accessing the first student object
-            firsrStudent.firsrStu(); // Calling the method to display the first student's information
+         //   firsrStudent = students[0]; // Accessing the first student object
+        //    firsrStudent.firsrStu(); // Calling the method to display the first student's information
             
          
             
