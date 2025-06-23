@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+    <script>
+        //lets think abour students have name age and major so not only names and put it in array we will use objects
+        let students = [
+            {name: "Alice",
+             age: 20, 
+             major: "Computer Science",
+              firsrStu : function() { // obigect currnt hits 
+            
+                console.log("Name: " + this.name + ", Age: " + this.age + ", Major: " + this.major);
+              }
+             
+             },
+            { name: "Bob",
+             age: 22, 
+             major: "Mathematics" 
+            },
+            { name: "Charlie",
+             age: 21,
+              major: "Physics" }
+
+             
+        ];        
+
+        
+       
+       
+         
+       //     students.forEach(function(student) {
+         //       console.log("Name: " + student.name + ", Age: " + student.age + ", Major: " + student.major);
+          //     });
+
+            //or we can use arrow function
+            // students.forEach((student) => {
+            //     console.log("Name: " + student.name + ", Age: " + student.age + ", Major: " + student.major);
+            // });
+
+            //or we can use for loop
+            // for (let i = 0; i < students.length; i++) {
+            //     console.log("Name: " + students[i].name + ", Age: " + students[i].age + ", Major: " + students[i].major);
+            // }
+  //
+
+
+
+            firsrStudent = students[0]; // Accessing the first student object
+            firsrStudent.firsrStu(); // Calling the method to display the first student's information
+            
+         
+            
+       
+
+    </script>
+</body>
+</html>
