@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #myParagraph {
+      color: blue;
+      font-size: 18px;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DOM Manipulation Example</h1>
+  <p id="myParagraph">This is the original text.</p>
+  <button onclick="changeText()">Click Me</button>
+
+  <script>
+    function changeText() {
+      const para = document.getElementById("myParagraph");
+      para.textContent = "The text has been changed!";
+      para.style.color = "red";
+      para.style.fontWeight = "bold";
+    }
+  </script>
+
+</body>
+</html>
