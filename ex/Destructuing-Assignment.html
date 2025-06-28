@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+    <script>
+        // Destructuring Assignment
+        // هو طريقة لاستخراج القيم من المصفوفات أو الكائنات بسهولة
+        let person = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        }; 
+
+       // let st = person.name
+       // let st2 = person.age;
+       let {name , age } = person; // Destructuring Assignment
+        // بدون الاسطر الي فوق ما راح يطلع شي بالكونسول
+        console.log(`Name: ${name}, Age: ${age}`); // Name: John, Age: 30
+
+      
+
+        // Array Destructuring
+        let numbers = [1, 2, 3, 4, 5];
+        let [first, second, ...rest] = numbers; // استخدمنا ... لج
+
+       console.log(first); // 1
+
+
+      
+    </script>
+    
+</body>
+</html>

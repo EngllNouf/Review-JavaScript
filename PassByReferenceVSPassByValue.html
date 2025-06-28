@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //pass by value
+        let x = 10
+        let y = x // y is a copy of x
+        y = 20 // changing y does not affect x
+        x = 50 
+        console.log(x) // 50
+        console.log(y) // 20
+
+        //pass by reference
+        let obj1 = { name: "Alice" }
+        let obj2 = obj1 // obj2 is a reference to obj1
+        obj2.name = "Bob" // changing obj2 affects obj1
+        console.log(obj1.name) // "Bob"
+        console.log(obj2.name) // "Bob"
+
+
+
+
+
+    </script>   
+        
+</body>
+</html>

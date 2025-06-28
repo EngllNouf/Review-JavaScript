@@ -10,10 +10,37 @@
     <ul id="studentList"></ul>
 
     <script>
+
+        // 1. Create an array of objects representing students. Each student object should have properties like name, age, and major.
+        //OBJEST INSIDEDE OBJEST
         let students = [
-            {name: "Alice", age: 20, major: "Computer Science"},
-            {name: "Bob", age: 22, major: "Mathematics"},
-            {name: "Charlie", age: 21, major: "Physics"}
+            { name: {
+                firstName: "Alice",
+                lastName: "Smith"
+            },
+             age: 20,
+              major: "Computer Science"
+
+            },
+            {
+                name: {
+                    firstName: "Bob",
+                    lastName: "Johnson"
+                },
+                age: 22,
+                major: "Mathematics"
+            },
+            {
+                name: {
+                    firstName: "Charlie",
+                    lastName: "Williams"
+                },
+                age: 21,
+                major: "Physics"
+            }
+
+
+            
         ];
 
   
@@ -24,7 +51,7 @@
 
             for (let i = 0; i < students.length; i++) {
                 let student = students[i];
-                studentList.innerHTML += `<li>${student.name}, Age: ${student.age}, Major: ${student.major}</li>`;
+                studentList.innerHTML += `<li>${student.name.firstName}, Age: ${student.age}, Major: ${student.major}</li>`;
             }
         }
 
