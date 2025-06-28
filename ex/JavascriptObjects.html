@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student List</h1>
+    <ul id="studentList"></ul>
+
+    <script>
+        let students = [
+            {name: "Alice", age: 20, major: "Computer Science"},
+            {name: "Bob", age: 22, major: "Mathematics"},
+            {name: "Charlie", age: 21, major: "Physics"}
+        ];
+
+  
+         
+        function displayStudents() {
+            let studentList = document.getElementById("studentList");
+            studentList.innerHTML = ""; // Clear the list
+
+            for (let i = 0; i < students.length; i++) {
+                let student = students[i];
+                studentList.innerHTML += `<li>${student.name}, Age: ${student.age}, Major: ${student.major}</li>`;
+            }
+        }
+
+        displayStudents();
+    </script>
+
+    
+    
+</body>
+</html>
