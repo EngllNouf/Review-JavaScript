@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Index Example</title>
+</head>
+<body>
+
+  <h1 class="names"></h1>
+  <h1 class="names"></h1>
+  <h1 class="names"></h1>
+  <h1 class="names"></h1>
+  <h1 class="names"></h1>
+
+  <script>
+    // مصفوفة تحتوي على أسماء
+    let nameList = ["نوف", "ليان", "سارة", "شهد", "رنا"];
+
+    // الحصول على كل عناصر class="names"
+    let elements = document.getElementsByClassName("names");
+
+    // استخدام index لتكرار وتعبئة العناصر
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].innerHTML = "مرحباً، " + nameList[i];
+    }
+  </script>
+
+</body>
+</html>
