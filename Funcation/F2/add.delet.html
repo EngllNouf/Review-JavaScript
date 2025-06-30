@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 40px;
+        }
+
+        div {
+            height: 50px;
+            background-color: #4CAF50;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #ffffff;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        li:hover {
+            background-color: #e0f7fa;
+        }
+    </style>
+</head>
+<body>
+
+    <div> our student list </div>
+    <ul id="list">
+        <li>Mohammed</li>
+        <li>Nouf</li>
+        <li>Sara</li>
+        <li>Ali</li>
+        <li>Lina</li>
+    </ul>
+
+
+
+    <script>
+        document.getElementById("list").innerHTML += `<li> NOUF </li>`
+
+
+
+
+        
+    </script>
+
+
+
+</body>
+</html>
