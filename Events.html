@@ -15,6 +15,12 @@
         <h2 id="TitleF" onclick="document.getElementById('TitleF').innerHTML= `changed`">Tarmeez Academy</h2>
         <h2 id="Title" onclick="this.innerHTML='changed'" >Tarmeez Academy</h2>
         <h2 id="titlejs" onclick="changStringFromJS()">Tarmeez Academy</h2>
+
+
+
+     <h2 id="TryEventLiseeiner" >Tarmeez Academy</h2>
+
+
      </div>
 
 
@@ -23,6 +29,15 @@
         function changStringFromJS(){
             document.getElementById("titlejs").innerHTML = "changed"
         }
+
+
+
+     
+        document.getElementById("TryEventLiseeiner").addEventListener("mouseout" , function(){
+                       document.getElementById("TryEventLiseeiner").innerHTML = "changed"
+
+        })
+
 
 
 
