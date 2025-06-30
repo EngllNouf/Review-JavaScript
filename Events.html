@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+  
+     <div style="text-align: center; font-size: xx-large; color: #000000; font-family: 'Times New Roman', Times, serif; font-weight: 500;">
+        <h2 id="Title" onclick="alert('successful')">Tarmeez Academy</h2>
+        <h2 id="Title" onclick="console.log('successful')">Tarmeez Academy</h2>
+        <h2 id="TitleF" onclick="document.getElementById('TitleF').innerHTML= `changed`">Tarmeez Academy</h2>
+        <h2 id="Title" onclick="this.innerHTML='changed'" >Tarmeez Academy</h2>
+        <h2 id="titlejs" onclick="changStringFromJS()">Tarmeez Academy</h2>
+     </div>
+
+
+
+     <script>
+        function changStringFromJS(){
+            document.getElementById("titlejs").innerHTML = "changed"
+        }
+
+
+
+
+     </script>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
