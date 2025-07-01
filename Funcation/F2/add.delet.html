@@ -5,61 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Styled List</title>
     <style>
+        /* تحسين الخطوط والألوان */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f4f8;
+            font-family: 'Roboto', Arial, sans-serif; /* خط حديث */
+            background-color: #f9fafb; /* خلفية ناعمة */
+            color: #333; /* لون النص */
             margin: 40px;
+            line-height: 1.6;
         }
 
+        /* تحسين العنوان */
         div {
-            height: 50px;
-            background-color: #4CAF50;
+            height: auto;
+            background-color: #4CAF50; /* لون أخضر مميز */
+            color: white; /* لون النص داخل الشريط */
+            padding: 15px 20px; /* مساحة داخلية أكبر */
             margin-bottom: 20px;
             border-radius: 8px;
+            font-size: 1.2em; /* تكبير النص */
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل خفيف */
         }
 
+        /* تحسين القائمة */
         ul {
-            list-style-type: none;
+            list-style-type: none; /* إزالة النقاط */
             padding: 0;
+            margin: 0 auto;
+            max-width: 400px; /* تحديد عرض القائمة */
         }
 
         li {
-            background-color: #ffffff;
-            margin-bottom: 10px;
-            padding: 10px 15px;
-            border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
+            background-color: #ffffff; /* خلفية بيضاء */
+            margin-bottom: 10px; /* مسافة بين العناصر */
+            padding: 15px 20px; /* مساحة داخلية أكبر */
+            border-radius: 8px; /* حواف مستديرة */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+            transition: transform 0.3s ease, background-color 0.3s ease; /* تأثير عند التحويم */
+            font-size: 1.1em; /* تكبير النص */
         }
 
+        /* تأثير عند التحويم */
         li:hover {
-            background-color: #e0f7fa;
+            background-color: #e0f7fa; /* لون مميز عند التحويم */
+            transform: scale(1.02); /* تكبير بسيط */
         }
     </style>
 </head>
 <body>
 
-    <div> our student list </div>
+    <div>Our Student List</div>
     <ul id="list">
         <li>Mohammed</li>
         <li>Nouf</li>
         <li>Sara</li>
         <li>Ali</li>
         <li>Lina</li>
+        
     </ul>
 
-
-
     <script>
-        document.getElementById("list").innerHTML += `<li> NOUF </li>`
-
-
-
-
+        // إضافة عنصر جديد إلى القائمة
+     
+      //  document.getElementById("list").innerHTML += `<li>Nouf</li>`;
         
-    </script>
+     let lisrEelment = document.createElement("li");
+     lisrEelment.textContent = "Nouf";
+     document.getElementById("list").appendChild(lisrEelment);
+     
 
-
+     //delet chieaild
+     let deletElement = document.getElementById("list").children[0];
+     document.getElementById("list").removeChild(deletElement);
+  
+  </script>
 
 </body>
 </html>
