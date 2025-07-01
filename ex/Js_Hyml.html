@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Name</title>
+    <style>
+        /* إعدادات عامة للصفحة */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* تصميم الحاوية */
+        .container {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+        }
+
+        /* عنوان الحاوية */
+        h1 {
+            font-size: 1.8rem;
+            color: #185a9d;
+            margin-bottom: 20px;
+        }
+
+        /* النص الذي يعرض الاسم */
+        #displayName {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #43cea2;
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 2px solid #43cea2;
+            border-radius: 10px;
+            background: #f9f9f9;
+            min-height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* حقل الإدخال */
+        input[type="text"] {
+            width: 90%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        /* تأثير عند التركيز على الإدخال */
+        input[type="text"]:focus {
+            border-color: #43cea2;
+            outline: none;
+            box-shadow: 0 0 10px rgba(67, 206, 162, 0.5);
+        }
+
+        /* تصميم زر الإرسال */
+        button {
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* تأثير عند تمرير الماوس على الزر */
+        button:hover {
+            background: linear-gradient(135deg, #185a9d, #43cea2);
+            transform: scale(1.05);
+        }
+
+        /* تأثير عند الضغط على الزر */
+        button:active {
+            transform: scale(1);
+        }
+
+        /* أيقونة الإدخال */
+        .icon {
+            font-size: 2rem;
+            color: #43cea2;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- أيقونة جميلة -->
+        <div class="icon">👋</div>
+        <!-- عنوان الصفحة -->
+        <h1>مرحبًا بك! أدخل اسمك</h1>
+        <!-- مكان عرض الاسم -->
+        <div id="displayName">الرجاء إدخال الاسم</div>
+        <!-- حقل الإدخال -->
+        <input type="text" id="nameInput" placeholder="أدخل اسمك هنا">
+        <!-- زر الإرسال -->
+        <button id="submitBtn">إرسال</button>
+    </div>
+     
+
+    <script>
+
+       document.getElementById("displayName").addEventListener("mouseover", function() {
+        
+        
+        this.style.backgroundColor = "red";
+          
+       });
+         displayName.addEventListener("mouseout", function () {
+          displayName.style.backgroundColor = ""; // يرجع للون الأصلي (حسب الـ CSS)
+     });
+
+      document.getElementById("nameInput").addEventListener("input", function () {
+  let name = this.value;
+
+  if (name === "") {
+    document.getElementById("displayName").innerText = "الرجاء إدخال الاسم";
+  } else {
+    document.getElementById("displayName").innerText = name;
+  }
+});
+
+
+       
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
