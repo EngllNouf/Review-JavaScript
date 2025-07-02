@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تحريك الأيقونة</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <style>
+    .icon {
+      font-size: 50px;
+      display: inline-block;
+      margin-top: 50px;
+    }
+    div{
+      background-color: black;
+      padding: 100px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="icon"></div>
+
+  <script>
+    anime({
+      targets: '.icon',
+      translateY: -20,
+      direction: 'alternate',
+      loop: true,
+      duration: 1000,
+      easing: 'easeInOutSine'
+    });
+  </script>
+
+</body>
+</html>
