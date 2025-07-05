@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Todo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            backdrop-filter: blur(4px);
+            width: 90%;
+            max-width: 600px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            border-radius: 2px;
+        }
+
+        h3 {
+            color: #636e72;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        #list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .task-item {
+            background: white;
+            margin: 15px 0;
+            padding: 20px 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            color: #2d3436;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border-left: 5px solid #6a11cb;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .task-content {
+            flex: 1;
+        }
+
+        .task-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .action-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .edit-btn {
+            color: #2ecc71;
+        }
+
+        .edit-btn:hover {
+            color: #27ae60;
+            transform: scale(1.1);
+        }
+
+        .delete-btn {
+            color: #e74c3c;
+        }
+
+        .delete-btn:hover {
+            color: #c0392b;
+            transform: scale(1.1);
+        }
+
+        #taskInput {
+            flex: 1;
+            padding: 18px 25px;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            color: #2d3436;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        #taskInput::placeholder {
+            color: #95a5a6;
+        }
+
+        #taskInput:focus {
+            outline: none;
+            border-color: #6a11cb;
+            box-shadow: 0 4px 20px rgba(106, 17, 203, 0.2);
+        }
+
+        .add-btn {
+            padding: 15px 25px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .add-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            .task-item {
+                padding: 15px;
+                font-size: 1rem;
+            }
+
+            #taskInput {
+                padding: 15px 20px;
+            }
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        body {
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>To Do List</h1>
+        <h3>Write your task</h3>
+
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Add a new task">
+            <button class="add-btn" id="add-btn">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+
+        <ul id="list">
+           
+        </ul>
+    </section>
+
+
+    
+
+   <script>
+
+
+               
+
+        document.getElementById("add-btn").addEventListener("click", function() {
+                        
+                      let tasks = document.getElementById("taskInput").value ;
+                    
+                    if (tasks=== ""){
+                        alert("Please enter a task");
+                        return;
+                    }
+       
+                    
+                console.log(tasks)
+                        document.getElementById("list").innerHTML += 
+                        ` <li class="task-item id="task-item">
+                <span class="task-content">${tasks}</span>
+                <div class="task-actions">
+                    <button class="action-btn edit-btn">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button id="delete-btn" class="action-btn delete-btn">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </li>`
+                });
+
+                                // 🔄 نستخدم تفويض الحدث على القائمة الكاملة (ul) لأن العناصر تُضاف ديناميكيًا
+                document.getElementById("list").addEventListener("click", function (event) {
+
+                    // ✅ نتحقق هل العنصر المضغوط هو زر الحذف أو داخل زر الحذف (عن طريق الكلاس)
+                    if (event.target.closest(".delete-btn")) {
+
+                        // 🧱 نحصل على عنصر <li> اللي يمثل المهمة نفسها
+                        const li = event.target.closest("li");
+
+                        // ✅ إذا وجدنا عنصر المهمة، نحذفه من الصفحة
+                        if (li) li.remove();
+                    }
+
+                });
+
+// 🔄 نفس الشيء: نراقب كل ضغطة زر داخل القائمة (ul) باستخدام تفويض الحدث
+document.getElementById("list").addEventListener("click", function(event) {
+
+    // ✅ نتحقق هل الزر المضغوط هو زر التعديل (عن طريق الكلاس)
+    if (event.target.closest(".edit-btn")) {
+
+        // 🧱 نحصل على عنصر <li> اللي يمثل المهمة
+        const li = event.target.closest("li");
+
+        // ✅ إذا وجدنا المهمة
+        if (li) {
+
+            // 📌 نجيب العنصر اللي يحتوي على نص المهمة داخل الـ <li>
+            const taskContent = li.querySelector(".task-content");
+
+            // 📝 نفتح نافذة prompt فيها النص الحالي، ونسمح للمستخدم يعدله
+            const newTask = prompt("Edit task:", taskContent.textContent);
+
+            // ✅ إذا المستخدم ضغط OK (ولم يضغط Cancel)
+            if (newTask !== null) {
+
+                // ✨ نغيّر النص داخل المهمة إلى النص الجديد اللي كتبه المستخدم
+                taskContent.textContent = newTask;
+            }
+        }
+    }
+
+});
+
+
+  
+
+
+
+
+
+
+                    
+
+
+
+
+  </script>
+</body>
+</html>

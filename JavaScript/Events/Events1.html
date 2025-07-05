@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="document.getElementById('demo').innerHTML = Date()">The
+        time is?</button>
+        <p id="demo"></p>
+
+        <button onclick="this.innerHTML = Date()">The time is?</button>
+
+         <br><br>
+        <button onclick="alert(Date())">The time is?</button>
+             <br><br>
+
+        <button onclick="displayDate()">The time is?</button>
+        <div id="demo2"></div>
+
+
+     <script>
+        function  displayDate() {
+            document.getElementById("demo2").innerHTML = Date();
+        }
+
+        
+     </script>
+
+                <h2>اختر لونك المفضل:</h2>
+
+            <select onchange="showColor(this.value)">
+                <option value="">-- اختر --</option>
+                <option value="أحمر">أحمر</option>
+                <option value="أزرق">أزرق</option>
+                <option value="أخضر">أخضر</option>
+            </select>
+
+            <p id="result"></p>
+
+            <script>
+                function showColor(color) {
+                document.getElementById("result").textContent = "لونك المفضل هو: " + color;
+                }
+            </script>
+    
+</body>
+</html>
