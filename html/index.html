@@ -15,6 +15,7 @@
     <h4>Heading 4</h4> <!--is USED FOR SUB HEADING-->
     <h5>Heading 5</h5> <!--is USED FOR SUB HEADING-->
     <h6>Heading 6</h6> <!--is USED FOR SUB HEADING-->
+    <hr> <!--is USED FOR HORIZONTAL RULE-->
     <!--Paragraph-->
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p> <!--is USED FOR PARAGRAPH-->
      <!-- BOLD VS ITALIC -->
@@ -30,10 +31,34 @@
     <i>fvsdv</i> <!--is USED FOR ITALIC-->
     <span>oevjopqevop</span>
 
+    <p><blockquote>wo things are infinite: the universe and human stupidity, and I'm not sure about the universe.</blockquote></p> <!--is USED FOR longer  QUOTES-->
+      <p><q>wo things are infinite: the universe and human stupidity, and I'm not sure about the universe.</q></p> <!--is USED FOR shorter QUOTES-->
+         <abbr title="Artificial Intelligence">AI</abbr> <!--is USED FOR ABBREVIATIONS-->
+    <br> <!--is USED FOR BREAK-->
+
+    <hr> <!--is USED FOR HORIZONTAL RULE-->
 
     <!--links-->
+    
     <a href="https://www.google.com">Google</a> <!--is USED FOR LINK-->
-    <button><a href="https://www.google.com">click</a> </button>
+    <bR> <!--is USED FOR BREAK-->
+    <a href = "mailto:amtyum@gmail.com">Email</a> <!--is USED FOR EMAIL-->
+    <br> <!--is USED FOR BREAK-->
+     <button><a href="https://www.google.com">click</a> </button>
+
+
+        <hr> <!--is USED FOR HORIZONTAL RULE-->
+    <!--images-->
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" width="200" height="200"> <!--is USED FOR IMAGE-->
+    <br>
+    <video width="320" height="240" controls> <!--is USED FOR VIDEO-->
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag. </video>
+
+
+
+
+
 
     <ul> <!--is USED FOR UNORDERED LIST-->
         <li>List item 1</li>
@@ -48,6 +73,88 @@
         <li>List item 3</li>
 
     </ol>
+
+    <dl>
+        <dt>coffe</dt>
+        <dd>Black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>White cold drink</dd>
+    </dl>
+
+
+
+
+    <figure>
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" width="200" height="200">
+        <figcaption>Google Logo</figcaption>
+    </figure>
+
+
+
+    <!--tabel-->
+    <table style="border: 1px solid black;">
+        <tr >
+            <th  scope="col">Column 1</th>
+         
+            <th scope="col">Column 2</th>
+            <th scope="col">Column 3</th>
+            <th scope="col">Column 4</th>
+       </tr>
+        <tr>
+            <th scope="row">row1</th>
+            <td>20</td>
+            <td>67</td>
+            <td>89</td>
+       
+           
+        </tr>
+        <tr>
+            <th scope="row">row1</th>
+           
+            <td>20</td>
+            <td>67</td>
+            <td>89</td>
+        </tr>
+
+ 
+    </table>
+
+    <form> <!--is USED FOR FORM-->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="AboutUs" >How did you hear about us</label>
+        <select id="AboutUs" name="AboutUs">
+            <option value="Google">Google</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Twitter">Twitter</option>
+            <option value="Other">Other</option>
+       </select>
+
+       <br>
+       <label for = "visit">would you visit again</label>
+       <input type="radio" id="visit" name="visit" value="yes">
+       <label for="visit">yes</label>
+       <input type="radio" id="visit" name="visit" value="no">
+       <label for="visit">no</label>
+
+       <br>
+       <label for="comments">Comments:</label>
+       <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        <br>
+       <input type="submit" value="Submit">
+       
+       
+       
+        
+
+
+        
+
+    </form>
 
 
       
