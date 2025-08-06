@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selectors Practice</title>
+  <style>
+    /* General Styling */
+    body {
+      background-color: rgb(155, 204, 245);
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Apply brown color to all elements (universal selector) */
+    * {
+      color: brown;
+    }
+
+    /* Styling for paragraph with class="paragraph" */
+    .paragraph {
+      color: black;
+    }
+
+    /* Headings color */
+    h1, h2 {
+      color: rgb(0, 0, 128);
+    }
+
+    /* Styling any <span> inside <p> */
+    p span {
+      background-color: yellow;
+      padding: 3px;
+      border-radius: 5px;
+    }
+
+    /* -----------------------------------
+        1. Descendant Selector - (E F)
+        Select any <a> inside a <p>, 
+        even if deeply nested.
+    ----------------------------------- */
+    p a {
+      color: blue;
+    }
+
+    /* -----------------------------------
+        2. Child Selector - (E > F)
+        Select <a> that is a direct child 
+        of <li> (not nested inside another tag)
+    ----------------------------------- */
+    li > a {
+      color: red;
+    }
+
+    /* -----------------------------------
+        3. Adjacent Sibling Selector - (E + F)
+        Select the <p> that comes immediately 
+        after an <h1> only
+    ----------------------------------- */
+    h1 + p {
+      font-weight: bold;
+    }
+
+    /* -----------------------------------
+        4. General Sibling Selector - (E ~ F)
+        Select all <p> elements that come 
+        after an <h1> (not just immediately)
+    ----------------------------------- */
+    h1 ~ p {
+      font-style: italic;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>CSS Selectors</h1>
+
+  <!-- ===== Practice Section with Titles ===== -->
+  <h2>First Title</h2>
+  <p class="paragraph">This is a sample paragraph for the first title. You can use CSS to change its color or size.</p>
+
+  <h2>Second Title</h2>
+  <p class="paragraph">This is a <span>Html</span> paragraph for the second title. Try using class or ID selectors on it.</p>
+
+  <h2>Third Title</h2>
+  <p class="paragraph">This text is related to the third title. Apply styles like color, spacing, or font.</p>
+
+  <h2>Fourth Title</h2>
+  <p class="paragraph">This paragraph is for <span>Html</span> the fourth title. Use selectors like :nth-child or :hover to style it.</p>
+
+  <!-- ===== Descendant Selector Example ===== -->
+  <p><a href="#">Link 1</a> inside a paragraph</p> <!-- Will be blue -->
+  <p><span><a href="#">Link 2</a></span> also inside a paragraph</p> <!-- Also blue -->
+
+  <!-- ===== Child Selector Example ===== -->
+  <ul>
+    <li><a href="#">Link 1</a></li> <!-- Will be red (direct child) -->
+    <li><div><a href="#">Link 2</a></div></li> <!-- Won’t be red (not direct) -->
+  </ul>
+
+  <!-- ===== Adjacent Sibling Selector Example ===== -->
+  <h1>Title</h1>
+  <p>This paragraph is immediately after h1</p> <!-- Bold -->
+  <p>This one is not immediately after h1</p> <!-- Not bold -->
+
+  <!-- ===== General Sibling Selector Example ===== -->
+  <h1>Main Title</h1>
+  <p>Paragraph 1</p> <!-- Italic -->
+  <div>Something else</div>
+  <p>Paragraph 2</p> <!-- Also italic -->
+
+</body>
+</html>
