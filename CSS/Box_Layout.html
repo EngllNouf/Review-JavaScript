@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+  body{
+    background-color: cadetblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+  
+
+
+
+
+
+
+
+
+
+
+  .main-section{
+    /*
+    CSS properties we use for the flex container are:
+
+    flex-direction : row column row-reverse column-reverse
+
+    flex-wrap
+    flex-flow
+    justify-content
+    align-items
+    align-content
+
+
+    */
+    display: flex;
+    justify-content: center;
+   
+    
+    
+    
+}
+
+.intro-section{
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 20px;text-align: center;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 950px) {
+    .main-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .intro-section {
+        width: 90%;
+    }
+    
+}
+  
+
+</style>
+
+
+
+
+
+<body>
+
+
+
+  <section class="main-section">
+
+ 
+    <section class="intro-section" style="flex-grow: 1">
+        <h1>CSS Selectors Practice</h1>
+        <p>This section demonstrates various CSS selectors and their effects.</p>
+        <ul>
+            <li>Selector 1: Basic Selector</li>
+            <li>Selector 2: Class Selector</li>
+            <li>Selector 3: ID Selector</li>
+            <li>Selector 4: Attribute Selector</li>
+        </ul>
+    </section>
+
+    <section class="intro-section" style="flex-grow: 1">
+        <h2>Additional Information</h2>
+        <p>This section provides more details about CSS selectors and their usage.</p>
+        <ul>
+            <li>Selector 5: Descendant Selector</li>
+            <li>Selector 6: Child Selector</li>
+            <li>Selector 7: Adjacent Sibling Selector</li>
+            <li>Selector 8: General Sibling Selector</li>
+        </ul>
+    </section>
+    <section class="intro-section" style="flex-grow: 9">
+        <h2>Conclusion</h2>
+        <p>Understanding CSS selectors is crucial for effective web design and development.</p>
+        <ul>
+            <li>Selector 9: Pseudo-class Selector</li>
+            <li>Selector 10: Pseudo-element Selector</li>
+            <li>Selector 11: Grouping Selector</li>
+            <li>Selector 12: Combinator Selector</li>
+        </ul>
+    </section>
+
+     </section>
+    
+</body>
+</html>
