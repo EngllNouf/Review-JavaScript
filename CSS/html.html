@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سيرة ذاتية - حامد الجدعاني</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Template B: Modern Professional CSS */
+        :root {
+            --primary-color: #2c3e50; /* Dark Blue */
+            --secondary-color: #ecf0f1; /* Light Gray */
+            --accent-color: #3498db; /* Bright Blue */
+            --text-color: #34495e; /* Dark Grayish Blue */
+            --sidebar-text-color: #ecf0f1;
+            --font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            width: 210mm;
+            min-height: 297mm;
+            max-width: 850px;
+            background: #fff;
+            margin: 20px auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            flex-direction: row-reverse; /* RTL layout */
+        }
+
+        .sidebar {
+            background-color: var(--primary-color);
+            color: var(--sidebar-text-color);
+            width: 35%;
+            padding: 30px 20px;
+            box-sizing: border-box;
+            text-align: right;
+        }
+
+        .main-content {
+            width: 65%;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        
+        .header {
+            text-align: right;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 1.4em;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+            break-inside: avoid;
+        }
+        
+        .section-title {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            break-after: avoid;
+        }
+        
+        .sidebar .section-title {
+            color: var(--accent-color);
+            border-bottom-color: #bdc3c7;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 0.95em;
+        }
+
+        .contact-info a {
+            color: var(--sidebar-text-color);
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .skills-list, .courses-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li, .courses-list li {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+
+        .about-me p {
+            font-size: 1em;
+            text-align: justify;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+        }
+
+        .experience-item h3, .education-item h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .experience-item .job-meta, .education-item .job-meta {
+            font-size: 1em;
+            font-weight: 500;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+        
+        .experience-item .company-date {
+            display: flex;
+            justify-content: space-between;
+            font-style: italic;
+            color: #555;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .experience-item ul {
+            padding-right: 20px;
+            margin: 0;
+        }
+
+        .experience-item ul li {
+            margin-bottom: 8px;
+        }
+        
+        .download-btn-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .download-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 16px;
+            font-family: var(--font-family);
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        @media print {
+            body {
+                background-color: #fff;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                min-height: 0;
+                display: block; /* Change flex to block for printing */
+            }
+            .sidebar, .main-content {
+                width: 100%; /* Make sidebar and main content full width */
+                display: block;
+                float: none;
+                padding: 10px;
+            }
+            .sidebar {
+                 /* You might want to hide the sidebar or style it differently for print */
+                 display: none; /* Example: hide sidebar in print */
+            }
+            .main-content {
+                width: 100%;
+            }
+            .download-btn-container {
+                display: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+            .section-title {
+                page-break-after: avoid;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="download-btn-container">
+        <button id="download-pdf" class="download-btn">تحميل PDF</button>
+    </div>
+
+    <div class="container" id="resume">
+        <div class="sidebar">
+            <div class="section contact-info">
+                <h3 class="section-title">معلومات الاتصال</h3>
+                <p><strong>الهاتف:</strong> <a href="tel:0562073448">0562073448</a></p>
+                <p><strong>البريد الإلكتروني:</strong> <a href="mailto:HamedAljadani1998@hotmail.com">HamedAljadani1998@hotmail.com</a></p>
+                <p><strong>الموقع:</strong> جدة, السعودية</p>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">المهارات</h3>
+                <ul class="skills-list">
+                    <li>تطبيق معايير الأمن والسلامة</li>
+                    <li>تقييم المخاطر وإجراءات الإخلاء</li>
+                    <li>تشغيل معدات الإطفاء والإنذار</li>
+                    <li>العمل الجماعي والانتباه للتفاصيل</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">الدورات</h3>
+                <ul class="courses-list">
+                    <li>دورة أمن المنشآت</li>
+                    <li>دورة السلامة والصحة المهنية</li>
+                    <li>دورة لغة إنجليزية</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h1>حامد الجدعاني</h1>
+                <h2>مراقب أمن وسلامة</h2>
+            </div>
+
+            <div class="section about-me">
+                <h2 class="section-title">نبذة عني</h2>
+                <p>
+                    أسعى للعمل في مجال الأمن والسلامة للاستفادة من خبراتي ومعارفي في تطبيق معايير الأمن وتعزيز بيئة عمل آمنة ومحمية من المخاطر. أرغب في المساهمة في حماية الأرواح والممتلكات من خلال تنفيذ الإجراءات الوقائية والتعامل بكفاءة مع الحالات الطارئة. كما أطمح إلى تطوير مهاراتي المهنية باستمرار من خلال التعلم والتدريب، بما يضمن الالتزام باللوائح والمعايير العالمية، وتحقيق أهداف المؤسسة في توفير بيئة عمل خالية من الحوادث والمخاطر.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">الخبرات</h2>
+                <div class="experience-item">
+                    <h3>مراقب أمن وسلامة</h3>
+                    <div class="job-meta">
+                        <span class="company-name">شركة الأمن والسلامة</span> | <span class="date-range">01/2022 – حتى الآن</span>
+                    </div>
+                    <ul>
+                        <li>مراقبة المعدات وإدارة الوصول إلى المواقع لضمان الامتثال لمعايير السلامة.</li>
+                        <li>الإبلاغ عن الحوادث، وتنفيذ عمليات التفتيش، وضمان تطبيق معايير السلامة.</li>
+                        <li>الاستجابة لحالات الطوارئ وتقديم تدريبات الأمن والسلامة للموظفين.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>أمين صندوق (كاشير)</h3>
+                    <div class="job-meta">
+                        <span class="company-name">شركة الإلكترونيات المتحدة (إكسترا)</span> | <span class="date-range">07/2018 – 09/2019</span>
+                    </div>
+                    <ul>
+                        <li>مساعدة العملاء في اختيار المنتجات ومعالجة المعاملات.</li>
+                        <li>إدارة أنظمة نقاط البيع وحل المشكلات التقنية.</li>
+                        <li>الحفاظ على نظافة منطقة العمل وضمان رضا العملاء.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">التعليم</h2>
+                <div class="education-item">
+                    <h3>شهادة الثانوية الصناعية - تخصص: حاسب آلي</h3>
+                    <div class="job-meta">
+                        <span class="university-name">المعهد الصناعي – المؤسسة العامة للتدريب التقني والمهني</span> | <span class="graduation-year">سنة التخرج: 2016</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('download-pdf').addEventListener('click', function () {
+            const element = document.getElementById('resume');
+            const opt = {
+                margin:       0,
+                filename:     'سيرة_ذاتية_حامد_الجدعاني.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2, useCORS: true, letterRendering: true },
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            // New Promise-based usage:
+            html2pdf().set(opt).from(element).save();
+        });
+    </script>
+
+</body>
+</html>
