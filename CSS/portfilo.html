@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Website Design - Easy Tutorials</title>
+</head>
+
+
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+     .hero{
+        width: 100%;
+        min-height: 100vh;
+        background-image: url(back-image.png);
+        background-position: center;
+        background-size: cover;
+        padding: 10px 10%;
+        overflow: hidden;
+
+
+     }
+     nav{
+        padding: 10px 0 ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     }
+     .logo{
+        width: 170px;
+        height: 50px;
+     }
+
+     nav ul li {
+        display: inline-block;
+        margin: 10px 15px;
+     }
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 400;
+       
+    } 
+    
+
+    .login-btn {
+        text-decoration:none ;
+        color: #333;
+        margin-right: 15px;
+        font-weight: 400;
+     
+
+    }
+
+    .Download-btn{
+        display: inline-block;
+         text-decoration:none ;
+        color: #fff;
+        padding: 14px 40px;
+        color: #fff;
+        background-image: linear-gradient(45deg ,#f06, #f79);
+        border-radius: 30px;
+        font-size: 14px;
+        border-top-right-radius: 0;
+        font-weight: bold;
+
+
+       
+    }
+    .content{
+        margin-top: 10%;
+        max-width: 600px;
+       
+    }
+    .content h1{
+        font-size: 70px;
+        font-weight: 700;
+        color:#222;
+      
+        
+    }
+    .content p{
+        margin: 10px 0 30px;
+        color: #333;
+
+        
+    }
+    .content .Download-btn{
+        width: 300px;
+        text-align: center;
+        padding: 15px 0;
+        font-weight: 900;
+        font-size: large;
+        
+        
+    }
+    .Download-btn:hover{
+       border-radius: 30px;
+        background-image: linear-gradient(45deg ,#f79, #f06);
+        transition: 0.8s;
+    }
+
+    .pic{
+        width: 530px;
+        position: absolute;
+        right: 10%;
+        bottom: 0;
+
+
+
+
+
+        
+    }
+
+   
+
+    .Animated{
+        opacity: 0;
+        transform: translateY(30px);
+        animation: moveup 0.5s  linear forwards;
+    }
+    @keyframes moveup{
+        0%{
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+</style>
+
+   
+<body>
+    <div class="hero">
+    <nav>
+        <img src = "logo.png" alt="Logo" class="logo">
+    
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+     <div>
+        <a href="#" class="login-btn">Log in</a>
+        <a href="#" class="Download-btn">Download Add</a>
+     </div>
+
+ </nav>
+      <div class="content">
+    <h1 class="Animated">
+        Make <br>
+        New Frinds
+
+    </h1>
+    <p class="Animated">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Doloribus, voluptatum! Quasi, cumque. 
+        
+     
+
+
+    </p>
+       <a href="#" class="Download-btn Animated">Join Now</a>
+
+  </div>
+  <img src="pic.png"  class="pic Animated" alt="Animated Image">
+ </div>
+ 
+
+ 
+
+    
+</body>
+</html>
