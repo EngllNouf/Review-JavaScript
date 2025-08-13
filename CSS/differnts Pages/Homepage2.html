@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .hero{
+        width: 100%;
+        height: 100vh;
+        padding: 20px 10%;
+
+
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    nav .logo{
+        width: 150px;
+        cursor: pointer;
+
+    }
+
+    nav .menu-img{
+        width: 50px;
+        cursor: pointer;
+
+    }
+
+    nav ul { 
+      flex: 1;
+      text-align: right;
+      margin-right: 150px;
+     
+    }
+
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin:  10px 30px;
+    }
+
+    nav ul li a {
+       text-decoration: none;
+       color :black;
+        font-weight: 700;
+        position: relative;
+        padding: 10px ;
+
+    }
+     /* you have to revew it */
+    nav ul li a::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        background: #fffd82;
+        left: 0;
+        bottom: -5px;
+        z-index: -1;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        transition: height 0.5s ease;
+       
+
+       
+    }
+    nav ul li a:hover::before{
+        height:85px;
+
+    }
+
+
+
+   .row{
+    display: flex;
+    flex-wrap: wrap; 
+
+
+   }
+
+   .col{
+    flex-basis: 50%;
+    position: relative;
+   }
+    .feature-img{
+        width: 100%;
+        margin-top: 10px;
+
+        
+       
+    }
+    .thumb-img{
+        width:280px;
+        position: absolute;
+       bottom: 10px;
+       left: 0;
+      border-radius: 9px;
+
+       box-shadow:5px 8px 10px rgba(0, 0, 0, 0.2);
+
+    }
+    .col h1{
+        margin-top: 290px;
+        font-size: 40px;
+        color: #000000;
+        font-weight: 600;
+       
+    }
+    .col a{
+        display: inline-block;
+        width: 200px;
+        text-align: center;
+        margin-top: 20px;
+        background: linear-gradient( to left, #fffd82, #f5f4c1);
+        color: #000000;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 10px 0px  10px 10px;
+        font-weight: bold;
+    }
+    .col a:hover{
+        border-radius: 10px 10px 10px 10px;;
+        transition: 0.5s;
+    }
+
+
+
+
+
+
+
+    </style>
+    
+<body>
+
+    <div class="hero">
+        <nav>
+            <img src="../differnts Pages/images/imagesForHomePage2/logo.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Recipe</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <img src="../differnts Pages/images/imagesForHomePage2/menu.png" alt="Logo" class="menu-img">
+        </nav>
+
+
+
+    <div class="row">
+        <div class="col">
+            <h1>
+                All  happiness depend on  a<br>
+                leisurely breakfast
+            </h1>
+            <a href="#">Order Now</a>
+
+        </div>
+        <div class="col">     
+               <img src="../differnts Pages/images/imagesForHomePage2/pic1.png" alt="Hero Image" class="feature-img">
+                <img src="../differnts Pages/images/imagesForHomePage2/pic2.png" alt="Hero Image" class="thumb-img">
+
+          </div>
+
+    </div>
+
+
+
+
+    </div>
+
+    
+</body>
+</html>
