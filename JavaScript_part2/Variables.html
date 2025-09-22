@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <script>
+     let username ="admin";
+     let password = 123;
+
+
+    //let block scope 
+    if(true){
+        let name = "Nouf"
+        console.log(name);
+    }
+    console.log(name);
+
+
+
+    
+    //var global scope
+
+    if(true){
+        var age = 25;
+        console.log(age);
+    }
+    console.log(age);
+
+
+    //const block scope
+  //  const pi = 3.14;
+  //  pi = 90; // Error: Assignment to constant variable
+
+
+    let userName = "user1"; // camelCase
+    let meassage = `welcome ${userName}`; // template literal
+    console.log(meassage);
+
+    let str = "Hello";
+    let nr = 7;
+    let bigNr = 12345678901234n;
+    let bool = true;
+    let sym = Symbol("unique");
+    let undef = undefined;
+    let unknown = null;
+    console.log("str", typeof str);
+    console.log("nr", typeof nr);
+    console.log("bigNr", typeof bigNr);
+    console.log("bool", typeof bool);
+    console.log("sym", typeof sym);
+    console.log("undef", typeof undef);
+    console.log("unknown", typeof unknown);
+  </script>
+   
+    
+</body>
+</html>
